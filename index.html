@@ -1,402 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
-    <title>Portfolio | Tùng Dương</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Tùng Dương — Software Engineer</title>
+  <meta name="description" content="Nguyễn Tùng Dương — final-year Software Engineering student in Hanoi. Backend (Python/FastAPI), full-stack HR &amp; payroll systems in production, automation pipelines.">
+  <meta property="og:title" content="Nguyễn Tùng Dương — Software Engineer">
+  <meta property="og:description" content="Backend &amp; full-stack developer. Built and operate an HR &amp; payroll platform used by a restaurant chain.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tugduong57.github.io/My-Portfolio/">
+  <meta property="og:image" content="https://tugduong57.github.io/My-Portfolio/assets/img/avatar.jpg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
 </head>
-<body oncontextmenu="return false">
+<body>
 
-<!-- pre loader -->
-<!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
-
-<!-- navbar starts -->
-<header>
-        <a href="/" class="logo">Tùng Dương</a>
-
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Tùng Dương</a>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#work">Featured</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle colour theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
 </header>
-<!-- navbar ends -->
 
+<main id="top">
 
-<!-- hero section starts -->
-<section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-    <h2><span id="greeting-text">Hi There,</span> <br/> I'm Nguyễn Tùng <span>Dương</span></h2>
-    <p>i am into <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/tugduong57/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href="https://github.com/tugduong57" target="_blank"><i class="fab fa-github"></i></a></li>
-        </ul>
-      </div>
-    </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/avt.png" alt="">
-</div>
-</section>
-<!-- hero section ends -->
-
-
-<!-- about section starts -->
-<section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    
-    <div class="row">
-
-    <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/Avata.jpg" alt="">
-    </div>
-    <div class="content">
-        <h3>I'm Dương</h3>
-        <span class="tag">Third Year Student</span>
-        
-        <p>I am a Third Year Student based in VietNam. 
-          My studies and personal projects are currently focused on 
-          Data Mining, Backend development, Flutter, and foundational AI principles.
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Software Engineer · Hanoi, Vietnam</div>
+        <h1>Hi, I'm Nguyễn Tùng <span>Dương</span>.</h1>
+        <p class="lead">
+          Final-year Software Engineering student at Thuy Loi University. I turn messy business
+          processes into working software — from talking with users and writing the spec, to
+          designing the database, shipping the backend and keeping it running in production.
         </p>
-        
-        <div class="box-container">
-            <!-- <div class="box">
-              <p><span> age: </span> 20</p>
-              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
-            </div> -->
-            <div class="box">
-              <p><span> email : </span> tugduongnguyen@gmail.com</p>
-              <p><span> place : </span> Đống Đa, Hà Nội</p>
-            </div>
+        <div class="btns">
+          <a class="btn primary" href="#work">See featured work</a>
+          <a class="btn" href="https://github.com/tugduong57" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+            GitHub
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/tugduong57/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://docs.google.com/document/d/1SH5laflxFASTBLDP2fK7JLYJUhaVkU3QmoITcRSj9a4/edit?usp=sharing" target="_blank" rel="noopener">Résumé</a>
         </div>
-        
-        <div class="resumebtn">
-            <a href="https://docs.google.com/document/d/1SH5laflxFASTBLDP2fK7JLYJUhaVkU3QmoITcRSj9a4/edit?usp=sharing" target="_blank" class="btn"><span>Resume</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-
-    </div>
-    </div>
-</section>
-<!-- about section ends -->
-
-<!-- skills section starts -->
-<section class="skills" id="skills">
-
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
-
-    <div class="container">
-          <div class="row" id="skillsContainer">
-
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
-                <span>AdobeXD</span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/visual-studio-code-2019.png"/>
-                <span>Visual</span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-project-jupyter-a-nonprofit-organization-created-to-open-source-software-logo-color-tal-revivo.png" alt="Jupyter Notebook icon">
-                <span>Jupyter Notebook</span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/python--v1.png"/>
-                <span>Python</span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/fluency/48/anaconda--v2.png"/>
-                <span>Anaconda</span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/pulsar-gradient/48/api.png"/>
-                <span>Api</span>
-              </div>
-            </div>
-            
-
-
       </div>
-</div>
-</section>
-<!-- skills section ends -->
-
-
-<!-- education section starts -->
-<section class="education" id="education">
-
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-
-    <div class="box-container">
-
-    <div class="box">
-        <div class="image">
-        <img draggable="false" src="./assets/images/educat/college.png" alt="">
-        </div>
-        <div class="content">
-        <h3>Bachelor of Engineering in Information Technology</h3>
-        <p>Thuy Loi University</p>
-        <h4>2023-2027 | Studying</h4>
-        </div>
+      <img class="avatar" src="assets/img/avatar.jpg" alt="Portrait of Nguyễn Tùng Dương" width="560" height="560">
     </div>
-
-    <div class="box">
-      <div class="image">
-      <img draggable="false" src="./assets/images/educat/school.jpg" alt="">
-      </div>
-      <div class="content">
-      <h3>Student</h3>
-      <p>Thach That High School</p>
-      <h4>2020-2023 | Completed</h4>
+    <div class="wrap">
+      <div class="stats" aria-label="Highlights">
+        <div class="stat"><b>7</b><span>restaurant branches running my HR system</span></div>
+        <div class="stat"><b>620+</b><span>commits on the HR platform</span></div>
+        <div class="stat"><b>~110k</b><span>lines of code, 7 months</span></div>
+        <div class="stat"><b>11,000+</b><span>automated AI jobs in 3 days</span></div>
       </div>
     </div>
+  </section>
 
-</div>
-</section>
-<!-- education section ends -->
+  <!-- Featured work -->
+  <section id="work">
+    <div class="wrap">
+      <div class="eyebrow">Featured work</div>
+      <h2 class="section-title">HR, attendance &amp; payroll platform for a restaurant chain</h2>
+      <p class="lead">
+        A Hanoi restaurant chain ran attendance on standalone fingerprint/face terminals and payroll on
+        hand-built Excel sheets. I took the project from the first requirements interview to a system that
+        every branch uses daily and that produces the real monthly payroll.
+      </p>
 
-
-<!-- work project section starts -->
-<section class="work" id="work">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-
-  <div class="box-container">
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/portfolio1.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
+      <article class="case">
+        <div class="case-head">
+          <h3>Lead developer &amp; business analyst</h3>
+          <div class="meta">Feb 2026 – Present · client project via university lecturers · private codebase</div>
         </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+
+        <div class="pipeline" aria-label="Data flow">
+          <span>Attendance terminals</span><i>→</i>
+          <span>Branch agent (Python)</span><i>→</i>
+          <span>Encrypted local buffer</span><i>→</i>
+          <span>FastAPI + MySQL</span><i>→</i>
+          <span>Timesheet</span><i>→</i>
+          <span>Payroll &amp; Excel export</span>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h4>What I did</h4>
+            <ul>
+              <li>Ran requirement interviews with management, branch managers and accountants; wrote the analysis, use cases and functional spec.</li>
+              <li>Designed the data model around an employment history (job history) so transfers, promotions, rehires and part-time ↔ full-time changes stay correct month by month.</li>
+              <li>Built a Python agent installed at each branch that listens to attendance terminals, buffers punches locally (encrypted) and syncs to the server — packaged as a standalone Windows executable that starts with the machine.</li>
+              <li>Implemented shift scheduling, attendance matching with manager overrides, approval workflows, and a payroll engine (standard workdays per position, allowances/deductions, part-time hour capping, multi-branch pay lines, monthly snapshots).</li>
+              <li>Matched the accountants' existing Excel templates for import/export so the switch-over was painless.</li>
+              <li>Coordinated a small student team, later onboarded junior students for on-site setup; wrote the attendance policy and user guides; trained branch staff.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Engineering choices</h4>
+            <ul>
+              <li><b>Nothing is hard-deleted.</b> Soft delete plus an audit log on every change, as the client required.</li>
+              <li><b>The database is the single source of truth</b> for attendance status — the frontend never re-derives it.</li>
+              <li>Role-based access: management, branch manager, accountant, auditor.</li>
+              <li>Dockerised backend, frontend (Nginx) and MySQL on a Linux VPS, with scripted deploy, backup and restore.</li>
+              <li>AI-assisted development (Claude Code, Gemini) — I own the design, review every change, and test against production backups before deploying.</li>
+            </ul>
+            <h4 style="margin-top:18px">Outcome</h4>
+            <ul>
+              <li>Pilot branch live in July 2026, all branches by August 2026.</li>
+              <li>Monthly payroll produced from the system since then, reconciled line by line with the accountants.</li>
+            </ul>
           </div>
         </div>
-      </div>
+
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQLModel</span><span class="tag">MySQL</span>
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Ant Design</span><span class="tag">WebSocket</span>
+          <span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Linux VPS</span><span class="tag">SQLite</span>
+        </div>
+        <p class="note">The source code and data belong to the client, so the repository is private. Happy to walk through the architecture in an interview.</p>
+      </article>
     </div>
+  </section>
 
-</div>
-
-<div class="viewall">
-  <a href="/projects" class="btn"><span>View All</span>
-    <i class="fas fa-arrow-right"></i>
-</a>
-</div>
-
-</section>
-<!-- work project section ends -->
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-
-  <div class="timeline">
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Self Study</h2>
-        </div>
-        <div class="desc">
-            <h3>Developer</h3>
-            <p>Oct 2023 - Oct 2024</p>
-        </div>
-      </div>
+  <!-- Experience -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="eyebrow">Experience</div>
+      <h2 class="section-title">Where I've worked</h2>
+      <ol class="timeline">
+        <li>
+          <h3>Lead Developer &amp; Business Analyst — HR &amp; Payroll Platform</h3>
+          <div class="meta">Client project · Feb 2026 – Present</div>
+          <ul>
+            <li>Took a restaurant-chain HR system from requirements to production; now supporting daily operations and monthly payroll.</li>
+            <li>See the featured case study above.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Software Engineer (Part-time) — CLV Media</h3>
+          <div class="meta">Dec 2025 – Aug 2026</div>
+          <ul>
+            <li>Built an “idea-to-video” content pipeline in Python: Streamlit front end, SQLite/RabbitMQ job queue and worker nodes on the office LAN.</li>
+            <li>Wrote multi-profile browser automation (Playwright, Selenium) with retry, queueing and health checks — 11,000+ AI generation jobs processed in 3 days.</li>
+            <li>Ran WhisperX speech-to-text in Docker on GPU and automated audio–video alignment with FFmpeg scripts.</li>
+            <li>Added image-hash quality checks and packaged tools (Docker, batch launchers, simple GUIs) so the non-technical media team could run them alone.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Student researcher — Thuy Loi University</h3>
+          <div class="meta">2025 – 2026</div>
+          <ul>
+            <li>University-level student research projects in data mining / NLP, including topic modelling of 7,500 scientific papers.</li>
+          </ul>
+        </li>
+      </ol>
     </div>
+  </section>
 
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Self Study</h2>
-        </div>
-        <div class="desc">
-            <h3>Internship</h3>
-            <p>Oct 2024 - Present</p>
-        </div>
-      </div>
-    </div>
+  <!-- Projects -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow">Projects</div>
+      <h2 class="section-title">Other things I've built</h2>
+      <div class="cards">
 
-  <div class="morebtn">
-    <a href="/experience" class="btn"><span>View All</span>
-      <i class="fas fa-arrow-right"></i>
-  </a>
-  </div>
-
-</div>
-
-</section>
-<!-- experience section ends -->
-
-<!-- contact section starts -->
-<section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
-<!-- contact section ends -->
-
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Duong's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
-
-      <div class="box">
-          <h3>contact info</h3>
-          <p> <i class="fas fa-phone"></i>+84 33-7654-898</p>
-          <p> <i class="fas fa-envelope"></i>tugduongnguyen@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Đống Đa, Hà Nội</p>
-          <div class="share">
-            <a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/tugduong57/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a class="github" aria-label="GitHub" href="https://github.com/tugduong57" target="_blank"><i class="fab fa-github"></i></a>
+        <article class="card">
+          <div class="card-body">
+            <h3>Scientific Paper Clustering &amp; Topic Modeling</h3>
+            <p>Unsupervised topic discovery for 7,500 ACM papers: NLP cleaning pipeline, TF-IDF + K-Means and Bag-of-Words + LDA, evaluated with elbow, silhouette and coherence scores.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">NLTK</span><span class="tag">scikit-learn</span><span class="tag">Gensim</span></div>
+            <div class="card-foot"><span class="meta">Jun – Aug 2025</span><span class="badge">Research</span></div>
           </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Eat &amp; Gym</h3>
+            <p>Personal fitness tracker: meals with macros, BMR/TDEE targets, workout log with timers and records, sleep and weight charts. Built for my own training and used daily.</p>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Android</span></div>
+            <div class="card-foot"><span class="meta">Oct 2026</span><span class="badge">Private repo</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Tick &amp; Task</h3>
+            <p>Task app designed from my own spreadsheet and mock-up, syncing between phone and desktop through Google Sheets with images stored on Drive.</p>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag">Google Sheets API</span><span class="tag">Drive</span></div>
+            <div class="card-foot"><span class="meta">Nov 2026</span><span class="badge">Private repo</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Document Management System</h3>
+            <p>Course project: mobile document management app with Firebase backend and Google sign-in.</p>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div>
+            <div class="card-foot"><span class="meta">2026</span><a href="https://github.com/tugduong57/Document-Management-System---with-Firebase" target="_blank" rel="noopener">Code →</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Sales Agency Management</h3>
+            <p>Desktop app for inventory, partners, price tables, invoices and user accounts, with PDF revenue reports and scripted database setup.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">.NET WinForms</span><span class="tag">SQL Server</span><span class="tag">iTextSharp</span></div>
+            <div class="card-foot"><span class="meta">Feb – Mar 2025</span><a href="https://github.com/tugduong57/Winform-PhanMemQuanLi" target="_blank" rel="noopener">Code →</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Library Management</h3>
+            <p>Library management desktop app structured as Model–View–Controller.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">SQL Server</span></div>
+            <div class="card-foot"><span class="meta">2025</span><a href="https://github.com/tugduong57/Tkinter-SQLServer_QuanLyThuVien" target="_blank" rel="noopener">Code →</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/img/caro-ai.jpg" alt="Caro (Gomoku) board from the Caro AI project" loading="lazy" width="609" height="640">
+          <div class="card-body">
+            <h3>Caro AI</h3>
+            <p>Gomoku game with a Minimax + alpha-beta AI, using a custom heuristic to rank and prune candidate moves.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Pygame</span><span class="tag">Minimax</span></div>
+            <div class="card-foot"><span class="meta">Dec 2024 – Feb 2025</span><a href="https://github.com/tugduong57/Pygame-MinimaxAlphaBeta_Co_Caro_CoBan" target="_blank" rel="noopener">Code →</a></div>
+          </div>
+        </article>
+
       </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="eyebrow">Skills</div>
+      <h2 class="section-title">Tools I use</h2>
+      <div class="skills">
+        <div class="skill"><h3>Languages</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">Dart</span></div></div>
+        <div class="skill"><h3>Backend &amp; data</h3><div class="tags"><span class="tag">FastAPI</span><span class="tag">SQLModel / SQLAlchemy</span><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">SQLite</span><span class="tag">MongoDB</span><span class="tag">Pandas</span></div></div>
+        <div class="skill"><h3>Frontend &amp; mobile</h3><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Ant Design</span><span class="tag">Streamlit</span><span class="tag">Flutter</span></div></div>
+        <div class="skill"><h3>DevOps</h3><div class="tags"><span class="tag">Docker / Compose</span><span class="tag">Nginx</span><span class="tag">Linux</span><span class="tag">RabbitMQ</span><span class="tag">Redis</span><span class="tag">Git</span></div></div>
+        <div class="skill"><h3>Automation &amp; AI</h3><div class="tags"><span class="tag">Playwright</span><span class="tag">Selenium</span><span class="tag">WhisperX</span><span class="tag">FFmpeg</span><span class="tag">scikit-learn</span><span class="tag">AI coding agents</span></div></div>
+        <div class="skill"><h3>Ways of working</h3><div class="tags"><span class="tag">Requirements analysis</span><span class="tag">System design</span><span class="tag">Writing specs &amp; guides</span><span class="tag">User training</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="wrap">
+      <div class="eyebrow">Education &amp; awards</div>
+      <h2 class="section-title">Background</h2>
+      <div class="edu">
+        <div class="skill">
+          <h3>Thuy Loi University</h3>
+          <p>B.Eng. Software Engineering · 2023 – 2027 (expected)</p>
+        </div>
+        <div class="skill">
+          <h3>Awards &amp; certificates</h3>
+          <ul>
+            <li>Consolation Prize — Vietnam Informatics Olympiad for university students (OLP), specialised division, 2025</li>
+            <li>Consolation Prize — Hanoi city-level excellent student competition in Informatics, 2022</li>
+            <li>IELTS 5.5 (2025)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow">Contact</div>
+      <h2 class="section-title">Let's talk</h2>
+      <p class="lead">Open to internships and junior backend / full-stack roles. Email is the fastest way to reach me.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:tugduongnguyen@gmail.com">tugduongnguyen@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/tugduong57/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/tugduong57" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Nguyễn Tùng Dương</span>
+    <span>Hanoi, Vietnam</span>
   </div>
+</footer>
 
-</section>
-<!-- footer section ends -->
-
-
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
-
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
-
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./assets/js/script.js"></script>
-
-<!-- ```javascript -->
-<script>
-    function updateGreeting() {
-        const hour = new Date().getHours();
-        let greeting;
-
-        if (hour < 12) {
-            greeting = "Good morning"; // Từ 0:00 đến 11:59
-        } else if (hour < 18) {
-            greeting = "Good afternoon"; // Từ 12:00 đến 17:59
-        } else {
-            greeting = "Good evening"; // Từ 18:00 đến 23:59
-        }
-
-        // Tìm phần tử có id là "greeting-text" và thay đổi nội dung
-        document.getElementById("greeting-text").textContent = greeting;
-    }
-
-    // Chạy hàm khi trang được tải
-    updateGreeting();
-</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
