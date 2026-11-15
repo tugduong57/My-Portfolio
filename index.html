@@ -72,10 +72,10 @@
     </div>
     <div class="wrap">
       <div class="stats" aria-label="Highlights">
-        <div class="stat"><b>7</b><span>restaurant branches running my HR system</span></div>
-        <div class="stat"><b>620+</b><span>commits on the HR platform</span></div>
-        <div class="stat"><b>~110k</b><span>lines of code, 7 months</span></div>
-        <div class="stat"><b>11,000+</b><span>images processed via Gemini in ~3.6 days</span></div>
+        <div class="stat"><b>7</b><span>restaurant branches running the system in production</span></div>
+        <div class="stat"><b>300+</b><span>employees managed across the chain</span></div>
+        <div class="stat"><b>~20</b><span>daily active users (managers &amp; accountants)</span></div>
+        <div class="stat"><b>10 mos</b><span>from first requirements interview to full handover</span></div>
       </div>
     </div>
   </section>
@@ -84,25 +84,25 @@
   <section id="work">
     <div class="wrap">
       <div class="eyebrow">Featured work</div>
-      <h2 class="section-title">HR, attendance &amp; payroll platform for a restaurant chain</h2>
+      <h2 class="section-title">HR, attendance &amp; payroll platform for a 7-branch restaurant chain</h2>
       <p class="lead">
         A Hanoi restaurant chain ran attendance on standalone fingerprint/face terminals and payroll on
-        hand-built Excel sheets. I took the project from the first requirements interview to a system that
-        every branch uses daily and that produces the real monthly payroll.
+        hand-built Excel sheets. I took the project from the first requirements interview to a production
+        system across all 7 branches (300+ employees, ~20 daily users) that produces the real monthly payroll.
       </p>
 
       <article class="case">
         <div class="case-head">
-          <h3>Lead developer &amp; business analyst</h3>
-          <div class="meta">Feb 2026 – Present · client project via university lecturers · private codebase</div>
+          <h3>Lead Full-stack Developer &amp; Business Analyst</h3>
+          <div class="meta">Feb 2026 – Nov 2026 · Outsourced project for a 7-branch restaurant chain · private codebase</div>
         </div>
 
         <div class="pipeline" aria-label="Data flow">
-          <span>Attendance terminals</span><i>→</i>
+          <span>7 Hikvision terminals</span><i>→</i>
           <span>Branch agent (Python)</span><i>→</i>
-          <span>Encrypted local buffer</span><i>→</i>
+          <span>Encrypted SQLite buffer</span><i>→</i>
           <span>FastAPI + MySQL</span><i>→</i>
-          <span>Timesheet</span><i>→</i>
+          <span>Timesheet &amp; approval</span><i>→</i>
           <span>Payroll &amp; Excel export</span>
         </div>
 
@@ -110,35 +110,35 @@
           <div>
             <h4>What I did</h4>
             <ul>
-              <li>Ran requirement interviews with management, branch managers and accountants; wrote the analysis, use cases and functional spec.</li>
-              <li>Designed the data model around an employment history (job history) so transfers, promotions, rehires and part-time ↔ full-time changes stay correct month by month.</li>
-              <li>Built a Python agent installed at each branch that listens to attendance terminals, buffers punches locally (encrypted) and syncs to the server — packaged as a standalone Windows executable that starts with the machine.</li>
-              <li>Implemented shift scheduling, attendance matching with manager overrides, approval workflows, and a payroll engine (standard workdays per position, allowances/deductions, part-time hour capping, multi-branch pay lines, monthly snapshots).</li>
-              <li>Matched the accountants' existing Excel templates for import/export so the switch-over was painless.</li>
-              <li>Coordinated a small student team, later onboarded junior students for on-site setup; wrote the attendance policy and user guides; trained branch staff.</li>
+              <li>Primary developer in a 3-student team for 6 months, then sole developer for the final 4 months, delivering the system from requirements interviews to production across 7 branches (300+ employees, ~20 daily users).</li>
+              <li>Sole owner of all non-coding work: business analysis, system design, DevOps, QA, documentation and user training.</li>
+              <li>Replaced Excel-based workflows with timesheet locking, staff transfer/rehire control and payroll status locking, giving head office a single source of truth.</li>
+              <li>Designed the MySQL data model around employment history so transfers, promotions, rehires and part-time ↔ full-time changes stay accurate month by month; built REST APIs (FastAPI, SQLModel) and a React web app with dashboards, timesheets and approval workflows.</li>
+              <li>Built a Python agent syncing 7 Hikvision terminals via encrypted SQLite, packaged as a standalone executable that starts with each branch machine.</li>
+              <li>Wrote functional specs, attendance policies and user guides, and trained branch managers and accountants.</li>
             </ul>
           </div>
           <div>
             <h4>Engineering choices</h4>
             <ul>
               <li><b>Nothing is hard-deleted.</b> Soft delete plus an audit log on every change, as the client required.</li>
-              <li><b>The database is the single source of truth</b> for attendance status — the frontend never re-derives it.</li>
+              <li><b>The database is the single source of truth</b> for attendance and payroll status — locking rules prevent unapproved edits and back-and-forth Excel sheets.</li>
               <li>Role-based access: management, branch manager, accountant, auditor.</li>
-              <li>Dockerised backend, frontend (Nginx) and MySQL on a Linux VPS, with scripted deploy, backup and restore.</li>
-              <li>AI-assisted development (Claude Code, Gemini) — I own the design, review every change, and test against production backups before deploying.</li>
+              <li>Deployed with Docker and Nginx on a Linux VPS with scripted deploy, backup and restore.</li>
+              <li>Ensured stability with Pytest and Playwright tests run on production backups; leveraged AI coding agents (Claude Code, Gemini) while owning system design and reviewing every change.</li>
             </ul>
             <h4 style="margin-top:18px">Outcome</h4>
             <ul>
-              <li>Pilot branch live in July 2026, all branches by August 2026.</li>
-              <li>Monthly payroll produced from the system since then, reconciled line by line with the accountants.</li>
+              <li>Live across all 7 branches (300+ employees, ~20 daily active users).</li>
+              <li>Monthly payroll produced from the system and reconciled line by line with the accountants.</li>
             </ul>
           </div>
         </div>
 
         <div class="tags">
           <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQLModel</span><span class="tag">MySQL</span>
-          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Ant Design</span><span class="tag">WebSocket</span>
-          <span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Linux VPS</span><span class="tag">SQLite</span>
+          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Ant Design</span><span class="tag">Pytest</span>
+          <span class="tag">Playwright</span><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Linux VPS</span><span class="tag">SQLite</span>
         </div>
         <p class="note">The source code and data belong to the client, so the repository is private. Happy to walk through the architecture in an interview.</p>
       </article>
@@ -152,28 +152,20 @@
       <h2 class="section-title">Where I've worked</h2>
       <ol class="timeline">
         <li>
-          <h3>Lead Developer &amp; Business Analyst — HR &amp; Payroll Platform</h3>
-          <div class="meta">Client project · Feb 2026 – Present</div>
+          <h3>Lead Full-stack Developer &amp; Business Analyst — HR, Attendance &amp; Payroll Platform</h3>
+          <div class="meta">Outsourced project for a 7-Branch Restaurant Chain · Feb 2026 – Nov 2026</div>
           <ul>
-            <li>Took a restaurant-chain HR system from requirements to production; now supporting daily operations and monthly payroll.</li>
-            <li>See the featured case study above.</li>
+            <li>Primary developer in a 3-student team for 6 months, then sole developer for the final 4 months, delivering the system from requirements interviews to production across 7 branches (300+ employees, ~20 daily users).</li>
+            <li>Sole owner of all non-coding work: business analysis, system design, DevOps, QA, documentation and user training.</li>
+            <li>See the featured case study above for full architectural details.</li>
           </ul>
         </li>
         <li>
-          <h3>MMO Tool Developer (Part-time) — CLV Media</h3>
+          <h3>Automation &amp; Pipeline Engineer (Part-time) — CLV Media</h3>
           <div class="meta">Dec 2025 – Aug 2026</div>
           <ul>
-            <li>Built an “idea-to-video” content pipeline in Python: Streamlit front end, SQLite/RabbitMQ job queue and worker nodes on the office LAN.</li>
-            <li>Wrote multi-profile browser automation (Playwright, Selenium) with retry, queueing and health checks — 11 parallel profiles processed 11,000+ images through Gemini in about 3.6 days.</li>
-            <li>Ran WhisperX speech-to-text in Docker on GPU and automated audio–video alignment with FFmpeg scripts.</li>
-            <li>Added image-hash quality checks and packaged tools (Docker, batch launchers, simple GUIs) so the non-technical media team could run them alone.</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Student researcher — Thuy Loi University</h3>
-          <div class="meta">2025 – 2026</div>
-          <ul>
-            <li>University-level student research projects in data mining / NLP, including topic modelling of 7,500 scientific papers.</li>
+            <li>Built an idea-to-video production pipeline in Python: Streamlit front end, SQLite/RabbitMQ job queue and Dockerised WhisperX transcription workers running on GPU machines across the office LAN.</li>
+            <li>Automated audio–video alignment with FFmpeg and packaged the tools so the non-technical media team could run them without developer support.</li>
           </ul>
         </li>
       </ol>
@@ -189,17 +181,17 @@
 
         <article class="card">
           <div class="card-body">
-            <h3>Scientific Paper Clustering &amp; Topic Modeling</h3>
-            <p>Unsupervised topic discovery for 7,500 ACM papers: NLP cleaning pipeline, TF-IDF + K-Means and Bag-of-Words + LDA, evaluated with elbow, silhouette and coherence scores.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">NLTK</span><span class="tag">scikit-learn</span><span class="tag">Gensim</span></div>
-            <div class="card-foot"><span class="meta">Jun – Aug 2025</span><span class="badge">Research</span></div>
+            <h3>Tick &amp; Task — Task App with Phone/Desktop Sync</h3>
+            <p>Specified requirements in a spreadsheet and a first mock-up, then built a Flutter app synced through Google Sheets and Drive; phone and desktop share the same data, including images.</p>
+            <div class="tags"><span class="tag">Flutter</span><span class="tag">Google Sheets API</span><span class="tag">Google Drive</span></div>
+            <div class="card-foot"><span class="meta">Nov 2026</span><span class="badge">Private repo</span></div>
           </div>
         </article>
 
         <article class="card">
           <div class="card-body">
-            <h3>Eat &amp; Gym</h3>
-            <p>Personal fitness tracker: meals with macros, BMR/TDEE targets, workout log with timers and records, sleep and weight charts. Built for my own training and used daily.</p>
+            <h3>Eat &amp; Gym — Personal Fitness App</h3>
+            <p>Flutter Android app built with an AI coding agent from my own specs: nutrition, workout, sleep and weight tracking; in daily use.</p>
             <div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Android</span></div>
             <div class="card-foot"><span class="meta">Oct 2026</span><span class="badge">Private repo</span></div>
           </div>
@@ -207,10 +199,10 @@
 
         <article class="card">
           <div class="card-body">
-            <h3>Tick &amp; Task</h3>
-            <p>Task app designed from my own spreadsheet and mock-up, syncing between phone and desktop through Google Sheets with images stored on Drive.</p>
-            <div class="tags"><span class="tag">Flutter</span><span class="tag">Google Sheets API</span><span class="tag">Drive</span></div>
-            <div class="card-foot"><span class="meta">Nov 2026</span><span class="badge">Private repo</span></div>
+            <h3>Scientific Paper Clustering &amp; Topic Modeling</h3>
+            <p>Unsupervised topic discovery for 7,500 ACM papers: NLP pipeline, TF-IDF + K-Means and Bag-of-Words + LDA, evaluated with Elbow, Silhouette and Coherence scores.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">NLTK</span><span class="tag">scikit-learn</span><span class="tag">Gensim</span></div>
+            <div class="card-foot"><span class="meta">Jun – Aug 2025</span><span class="badge">Research</span></div>
           </div>
         </article>
 
@@ -252,12 +244,10 @@
       <div class="eyebrow">Skills</div>
       <h2 class="section-title">Tools I use</h2>
       <div class="skills">
-        <div class="skill"><h3>Languages</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">Dart</span></div></div>
-        <div class="skill"><h3>Backend &amp; data</h3><div class="tags"><span class="tag">FastAPI</span><span class="tag">SQLModel / SQLAlchemy</span><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">SQLite</span><span class="tag">MongoDB</span><span class="tag">Pandas</span></div></div>
-        <div class="skill"><h3>Frontend &amp; mobile</h3><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Ant Design</span><span class="tag">Streamlit</span><span class="tag">Flutter</span></div></div>
-        <div class="skill"><h3>DevOps</h3><div class="tags"><span class="tag">Docker / Compose</span><span class="tag">Nginx</span><span class="tag">Linux</span><span class="tag">RabbitMQ</span><span class="tag">Redis</span><span class="tag">Git</span></div></div>
-        <div class="skill"><h3>Automation &amp; AI</h3><div class="tags"><span class="tag">Playwright</span><span class="tag">Selenium</span><span class="tag">WhisperX</span><span class="tag">FFmpeg</span><span class="tag">scikit-learn</span><span class="tag">AI coding agents</span></div></div>
-        <div class="skill"><h3>Ways of working</h3><div class="tags"><span class="tag">Requirements analysis</span><span class="tag">System design</span><span class="tag">Writing specs &amp; guides</span><span class="tag">User training</span></div></div>
+        <div class="skill"><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">C#</span><span class="tag">C++</span><span class="tag">Bash</span></div></div>
+        <div class="skill"><h3>Frameworks &amp; testing</h3><div class="tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">SQLModel / SQLAlchemy</span><span class="tag">Pytest</span><span class="tag">Playwright</span><span class="tag">Selenium</span><span class="tag">Streamlit</span><span class="tag">Flutter</span></div></div>
+        <div class="skill"><h3>Data &amp; infrastructure</h3><div class="tags"><span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">MongoDB</span><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Linux</span><span class="tag">RabbitMQ</span><span class="tag">Git</span></div></div>
+        <div class="skill"><h3>Practices &amp; AI</h3><div class="tags"><span class="tag">Requirements analysis</span><span class="tag">System design</span><span class="tag">REST APIs</span><span class="tag">AI coding agents (Claude Code, Gemini)</span><span class="tag">FFmpeg</span><span class="tag">WhisperX</span></div></div>
       </div>
     </div>
   </section>
@@ -270,14 +260,14 @@
       <div class="edu">
         <div class="skill">
           <h3>Thuy Loi University</h3>
-          <p>B.Eng. Software Engineering · 2023 – 2027 (expected)</p>
+          <p>Bachelor of Engineering in Software Engineering · Oct 2023 – Expected 2027</p>
+          <p style="margin-top:6px">GPA: 3.3/4.0</p>
         </div>
         <div class="skill">
-          <h3>Awards &amp; certificates</h3>
+          <h3>Awards &amp; languages</h3>
           <ul>
-            <li>Consolation Prize — Vietnam Informatics Olympiad for university students (OLP), specialised division, 2025</li>
-            <li>Consolation Prize — Hanoi city-level excellent student competition in Informatics, 2022</li>
-            <li>IELTS 5.5 (2025)</li>
+            <li>Consolation Prize — Vietnam Olympiad in Informatics for Students (OLP), 2025</li>
+            <li>English (IELTS 5.5, 2025)</li>
           </ul>
         </div>
       </div>
